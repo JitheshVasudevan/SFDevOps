@@ -30,7 +30,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install SFDX CLI
         run: npm install sfdx-cli --global
-
+      #connecting SF Org
+      - name: Integrating Salesforce
+        run:  sfdx force:auth:jwt:grant --clientid 3MVG9Y6d_Btp4xp7d6A2l3.gzdsSkTUrEaPwP7IGU2kr5U06r_HeTYPDEsJkBEm7a6sNFsnZlbQnJQZAjB2rw --jwtkeyfile server.key --username jitheshcv90@gmail.com --instanceurl https://jithesh-dev-ed.my.salesforce.com
       # Runs a set of commands using the runners shell
       - name: Run a single-line script
         run: |
